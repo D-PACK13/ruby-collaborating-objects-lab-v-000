@@ -10,9 +10,9 @@ class Artist
   end
   
   def self.create_by_name(name)
-  	@name = name
-	  @@all << self.new(@name)
-  	self.all.detect{|artist| artist.name == name}
+    artist = Artist.new(name)
+    artist.save
+    artist
   end 
   
   def self.find_by_name(name)
