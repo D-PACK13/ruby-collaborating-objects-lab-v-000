@@ -12,12 +12,11 @@ class Artist
   def self.create_by_name(name)
   	@name = name
 	  @@all << self.new(@name)
-  	self.all.detect{|song| song.name == name}
+  	self.all.detect{|artist| artist.name == name}
   end 
   
   def self.find_by_name(name)
-  	@name = name
-  	self.all.detect{|song| song.name == name}
+  	self.all.detect{|artist| artist.name == name}
   end
   
   def self.find_or_create_by_name(name)
